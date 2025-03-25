@@ -1,5 +1,6 @@
 import styles from "./page.module.css";
 import { getWorkPlaces } from "../utils/contentful";
+import { ProjectProps } from "@/components/project/project.type";
 
 export default async function Home() {
   const workplaces = await getWorkPlaces();
@@ -11,10 +12,10 @@ export default async function Home() {
         <div>
         {workplaces.map((workplace) => (
           <div key={workplace.id as string} data-id={workplace.id}>
-            <h2>{workplace.name}</h2>
-            <p>{workplace.description}</p>
+            <h2>{workplace.name as string}</h2>
+            <p>{workplace.description as string}</p>
           
-            {workplace.project.map((project) => (
+            {(workplace.project as ProjectProps[])?.map((project: any) => (
               <div key={project.fields.slug as string}>
                 <h3>{project.fields.title}</h3>
                 <p>{project.fields.description}</p>
