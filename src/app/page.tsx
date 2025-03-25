@@ -15,7 +15,7 @@ export default async function Home() {
             <h2>{workplace.name as string}</h2>
             <p>{workplace.description as string}</p>
           
-            {(workplace.project as ProjectProps[])?.map((project: any) => (
+            {(workplace.project as ProjectProps[])?.map((project: ProjectProps) => (
               <div key={project.fields.slug as string}>
                 <h3>{project.fields.title}</h3>
                 <p>{project.fields.description}</p>
