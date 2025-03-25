@@ -1,6 +1,5 @@
 'use client'
 
-import { ReactElement, JSXElementConstructor, ReactNode, ReactPortal } from "react"
 import { ProjectProps } from "./project.type"
 
  

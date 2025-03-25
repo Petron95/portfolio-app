@@ -1,6 +1,5 @@
 'use client'
 
-import Project from "../project/projectComponent";
 import { WorkplaceProps } from "./workplace.type";
 
  

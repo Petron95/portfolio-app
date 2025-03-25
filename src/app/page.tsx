@@ -1,4 +1,3 @@
-import Image from "next/image";
 import styles from "./page.module.css";
 import { getWorkPlaces } from "../utils/contentful";
 
@@ -11,12 +10,12 @@ export default async function Home() {
         <h1>Petras Portfolio</h1>
         <div>
         {workplaces.map((workplace) => (
-          <div>
+          <div key={workplace.name}>
             <h2>{workplace.name}</h2>
             <p>{workplace.description}</p>
           
             {workplace.project.map((project) => (
-              <div>
+              <div key={project.fields.title}>
                 <h3>{project.fields.title}</h3>
                 <p>{project.fields.description}</p>
               </div>
