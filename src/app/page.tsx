@@ -9,8 +9,8 @@ export default async function Home() {
       <main className={styles.main}>
         <h1>Petras Portfolio</h1>
         <div>
-        {workplaces.map((workplace) => (
-          <div key={workplace.name}>
+        {workplaces.map((workplace, i) => (
+          <div key={i}>
             <h2>{workplace.name}</h2>
             <p>{workplace.description}</p>
           
