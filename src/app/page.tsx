@@ -10,12 +10,12 @@ export default async function Home() {
         <h1>Petras Portfolio</h1>
         <div>
         {workplaces.map((workplace) => (
-          <div key={workplace.id} data-id={workplace.id}>
+          <div key={workplace.id as string} data-id={workplace.id}>
             <h2>{workplace.name}</h2>
             <p>{workplace.description}</p>
           
             {workplace.project.map((project) => (
-              <div key={project.fields.title}>
+              <div key={project.fields.slug as string}>
                 <h3>{project.fields.title}</h3>
                 <p>{project.fields.description}</p>
               </div>
