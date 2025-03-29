@@ -1,4 +1,5 @@
 export type ProjectProps = {
+    contentTypeId: "project",
     fields: {
         title: string;
         roles: string[];
@@ -7,6 +8,7 @@ export type ProjectProps = {
         website: string;
         github: string;
         slug: string;
+        id: number;
         photos: string[];
         videoUrls: string[];
     }
